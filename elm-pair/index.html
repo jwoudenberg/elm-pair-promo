@@ -16,7 +16,7 @@
     to make, and it will do the actual work. It's a bit like using an IDE, except
     you don't need to learn any keyboard shortcuts.</p>
 
-    <p>You talk to Elm-pair by saving a file in your project. Elm-pair will notice the change you made since you last saved, and if it understands your intent will respond with a change off its own.</p>
+    <p>You talk to Elm-pair by making a change in your code and saving it. Elm-pair will notice the change you made, and if it understands your intent will respond with a change off its own.</p>
 
     <p>To explain what working with Elm-pair is like its easiest to show you some examples. In the recordings below we use the terminal editor Vim, but Elm-pair runs on any editor that supports the editor-driver protocol.</p>
 
@@ -24,22 +24,10 @@
 
     <h3>Changing names</h3>
 
-    <p>Change the name of a function, let binding, type, constructor or field and save your file. Elm-pair will rename all other uses of the name across your entire project.</p>
-
-
-    <details>
-      <summary>Watch example</summary>
-      <asciinema-player
-        src="/recordings/rename-record-field.cast.txt"
-        cols="80"
-        rows="30"
-        poster="npt:0:1"
-        theme="solarized-light"
-      ></asciinema-player>
-    </details>
+    <p>Change the name of a type in one place and Elm-pair will find all other uses of the type across your project and rename them too. This doesn't just work for renaming types, but for functions, let bindings, constructors, and record fields too!</p>
 
     <details>
-      <summary>Watch example</summary>
+      <summary>Renaming a type</summary>
       <asciinema-player
         src="/recordings/rename-type.cast.txt"
         cols="80"
@@ -49,12 +37,23 @@
       ></asciinema-player>
     </details>
 
+    <details>
+      <summary>Renaming a record field</summary>
+      <asciinema-player
+        src="/recordings/rename-record-field.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
+
     <h3>Working with imports</h3>
 
-    <p>Use a qualified name in your code and Elm-pair will automatically add an import statement if necessary.</p>
+    <p>Elm-pair manages your list of module imports. Start using a function from another module and Elm-pair will add an import for it. Stop using a module and Elm-pair will remove its import.</p>
 
     <details>
-      <summary>Watch example</summary>
+      <summary>Add an import</summary>
       <asciinema-player
         src="/recordings/add-import.cast.txt"
         cols="80"
@@ -64,10 +63,8 @@
       ></asciinema-player>
     </details>
 
-    <p>Remove the qualifier in front of a name and Elm-pair will automatically add it to the `exposing` clause of an import.</p>
-
     <details>
-      <summary>Watch example</summary>
+      <summary>Add an import to the exposing list</summary>
       <asciinema-player
         src="/recordings/unqualify-import.cast.txt"
         cols="80"
@@ -77,10 +74,8 @@
       ></asciinema-player>
     </details>
 
-    <p>Elm-pair will automatically remove unused imports.</p>
-
     <details>
-      <summary>Watch example</summary>
+      <summary>Remove an unused import</summary>
       <asciinema-player
         src="/recordings/remove-unnecessary-imports.cast.txt"
         cols="80"
@@ -90,12 +85,12 @@
       ></asciinema-player>
     </details>
 
-    <h3>Adding or removing function arguments</h3>
+    <h3>Changing functions</h3>
 
-    <p>Change a function to take another argument and Elm-pair will put placeholder values anywhere you call the function across your project.</p>
+    <p>Add or remove functions to an argument and Elm-pair will change all places the function is used to ensure your project keeps compiling.</p>
 
     <details>
-      <summary>Watch example</summary>
+      <summary>Add an argument to function</summary>
       <asciinema-player
         src="/recordings/add-argument.cast.txt"
         cols="80"
@@ -105,10 +100,8 @@
       ></asciinema-player>
     </details>
 
-    <p>Remove an unused argument from a function and Elm-pair will stop passing a value for it anywhere you call the function. Should this result in other functions with an unused argument Elm-pair will remove the argument from them too, and keeping going until there's no more unused arguments left.</p>
-
     <details>
-      <summary>Watch example</summary>
+      <summary>Remove an argument from a function</summary>
       <asciinema-player
         src="/recordings/remove-unused-argument.cast.txt"
         cols="80"
@@ -118,38 +111,14 @@
       ></asciinema-player>
     </details>
 
-    <h3>Extracting and inling functions</h3>
+    <h3>Extracting and inlining code</h3>
 
-    <p>Remove a let binding and Elm-pair will insert the body of the binding in all places using it.</p>
+    <p>Elm-pair helps you break a up complex code into pieces. You can start by removing part of a larger Elm expression, and make up a name for a yet-to-be-written helper function to replace it with. Elm-pair will respond by creating the helper in a let statement. If you want you can turn the newly created helper into a top level function. If the helper body now uses values that are no longer in scope Elm-pair will add arguments for them.</p>
 
-    <details>
-      <summary>Watch example</summary>
-      <asciinema-player
-        src="/recordings/inline-let.cast.txt"
-        cols="80"
-        rows="30"
-        poster="npt:0:1"
-        theme="solarized-light"
-      ></asciinema-player>
-    </details>
-
-    <p>Move a let binding to the root of a module and Elm-pair will add extra arguments if necessary. Move a function to a let binding and Elm-pair will remove arguments. You can also move let bindings from one let statement to another and Elm-pair will update its arguments accordingly.</p>
+    <p>Sometimes we get carried away with breaking code up. To make sense of it we need to move it together again. No problem. Just remove the helper function you no longer want and Elm-pair will inline its body everywhere the helper was used.</p>
 
     <details>
-      <summary>Watch example</summary>
-      <asciinema-player
-        src="/recordings/extract-from-let.cast.txt"
-        cols="80"
-        rows="30"
-        poster="npt:0:1"
-        theme="solarized-light"
-      ></asciinema-player>
-    </details>
-
-    <p>Replace an expression in a function body with a name and Elm-pair will create a let binding with that name, with the expression as its body.</p>
-
-    <details>
-      <summary>Watch example</summary>
+      <summary>Extract code into a let</summary>
       <asciinema-player
         src="/recordings/extract-into-let.cast.txt"
         cols="80"
@@ -159,14 +128,10 @@
       ></asciinema-player>
     </details>
 
-    <h3>Working with types</h3>
-
-    <p>Replace a primitive type in a type signature with a named type and Elm-pair will create a type alias with that name.</p>
-
     <details>
-      <summary>Watch example</summary>
+      <summary>Turning a let into a top level function</summary>
       <asciinema-player
-        src="/recordings/alias-to-wrapper-type.cast.txt"
+        src="/recordings/extract-from-let.cast.txt"
         cols="80"
         rows="30"
         poster="npt:0:1"
@@ -174,10 +139,23 @@
       ></asciinema-player>
     </details>
 
-    <p>Remove the `alias` from a `type alias` and Elm-pair will turn it into a wrapper type.</p>
+    <details>
+      <summary>Inlining a helper by removing it</summary>
+      <asciinema-player
+        src="/recordings/inline-let.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
+
+    <h3>Evolving types</h3>
+
+    <p>As an application grows so do the applications types. A primitive `Int` might be replaced with a wrapper type `Id` or a record might gain additional fields. Whenever you initiate a change like this Elm-pair will finish it for you and keep your code compiling.</p>
 
     <details>
-      <summary>Watch example</summary>
+      <summary>Replace a primitive type with a type alias</summary>
       <asciinema-player
         src="/recordings/create-type-alias.cast.txt"
         cols="80"
@@ -187,10 +165,19 @@
       ></asciinema-player>
     </details>
 
-    <p>Add or remove fields to a record and Elm-pair will automatically update all uses of the record.</p>
+    <details>
+      <summary>Upgrade a type alias to a wrapper type</summary>
+      <asciinema-player
+        src="/recordings/alias-to-wrapper-type.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <details>
-      <summary>Watch example</summary>
+      <summary>Add a new field to a record</summary>
       <asciinema-player
         src="/recordings/add-record-field.cast.txt"
         cols="80"
@@ -212,7 +199,7 @@
 
     <p>I'm really sorry to say Elm-pair doesn't exist yet. It's just an idea, and the recordings on this page have all been faked. I wrote up some additional thoughts on a possible architecture for Elm-pair in a blog post.</p>
 
-    <p>I'd love to hear your thoughts on Elm-pair. Would it support you working with Elm or not? Would you prefer Elm-pair over more classical IDE-like functions that you trigger explicitly? Please let me know on Twitter. Maybe some day we'll have a too like Elm-pair!</p>
+    <p>I'd love to hear your thoughts on Elm-pair. Would it support you working with Elm or not? Would you prefer Elm-pair over more classical IDE-like functions that you trigger explicitly? Please let me know on Twitter. And maybe some day a tool like Elm-pair will have our back!</p>
 
     <script src="/asciinema-player.js"></script>
   </section>
