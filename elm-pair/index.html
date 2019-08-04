@@ -27,139 +27,178 @@
     <p>Change the name of a function, let binding, type, constructor or field and save your file. Elm-pair will rename all other uses of the name across your entire project.</p>
 
 
-    <asciinema-player
-      src="/recordings/rename-record-field.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/rename-record-field.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
-    <asciinema-player
-      src="/recordings/rename-type.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/rename-type.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <h3>Working with imports</h3>
 
     <p>Use a qualified name in your code and Elm-pair will automatically add an import statement if necessary.</p>
 
-    <asciinema-player
-      src="/recordings/add-import.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/add-import.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <p>Remove the qualifier in front of a name and Elm-pair will automatically add it to the `exposing` clause of an import.</p>
 
-    <asciinema-player
-      src="/recordings/unqualify-import.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/unqualify-import.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <p>Elm-pair will automatically remove unused imports.</p>
 
-    <asciinema-player
-      src="/recordings/remove-unnecessary-imports.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/remove-unnecessary-imports.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <h3>Adding or removing function arguments</h3>
 
     <p>Change a function to take another argument and Elm-pair will put placeholder values anywhere you call the function across your project.</p>
 
-    <asciinema-player
-      src="/recordings/add-argument.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/add-argument.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <p>Remove an unused argument from a function and Elm-pair will stop passing a value for it anywhere you call the function. Should this result in other functions with an unused argument Elm-pair will remove the argument from them too, and keeping going until there's no more unused arguments left.</p>
 
-    <asciinema-player
-      src="/recordings/remove-unused-argument.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/remove-unused-argument.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <h3>Extracting and inling functions</h3>
 
     <p>Remove a let binding and Elm-pair will insert the body of the binding in all places using it.</p>
 
-    <asciinema-player
-      src="/recordings/inline-let.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/inline-let.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <p>Move a let binding to the root of a module and Elm-pair will add extra arguments if necessary. Move a function to a let binding and Elm-pair will remove arguments. You can also move let bindings from one let statement to another and Elm-pair will update its arguments accordingly.</p>
 
-    <asciinema-player
-      src="/recordings/extract-from-let.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/extract-from-let.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <p>Replace an expression in a function body with a name and Elm-pair will create a let binding with that name, with the expression as its body.</p>
 
-    <asciinema-player
-      src="/recordings/extract-into-let.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/extract-into-let.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <h3>Working with types</h3>
 
     <p>Replace a primitive type in a type signature with a named type and Elm-pair will create a type alias with that name.</p>
 
-    <asciinema-player
-      src="/recordings/alias-to-wrapper-type.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/alias-to-wrapper-type.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <p>Remove the `alias` from a `type alias` and Elm-pair will turn it into a wrapper type.</p>
 
-    <asciinema-player
-      src="/recordings/create-type-alias.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/create-type-alias.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <p>Add or remove fields to a record and Elm-pair will automatically update all uses of the record.</p>
 
-    <asciinema-player
-      src="/recordings/add-record-field.cast.txt"
-      cols="80"
-      rows="30"
-      poster="npt:0:1"
-      theme="solarized-light"
-    ></asciinema-player>
+    <details>
+      <summary>Watch example</summary>
+      <asciinema-player
+        src="/recordings/add-record-field.cast.txt"
+        cols="80"
+        rows="30"
+        poster="npt:0:1"
+        theme="solarized-light"
+      ></asciinema-player>
+    </details>
 
     <h2>Will Elm-pair break my code?</h2>
 
