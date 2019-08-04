@@ -2,6 +2,8 @@ body {
   font-size: 100%;
   font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 1.5;
+  color: #333;
+  background-color: #efefe3;
 }
 
 section {
@@ -12,10 +14,12 @@ section {
 
 h1 {
   font-size: 2.5em;
+  margin-bottom: 0;
 }
 
 h2 {
   font-size: 1.9em;
+  margin-top: 1.5em;
 }
 
 h3 {
@@ -31,4 +35,23 @@ details {
 
 summary {
   cursor: pointer;
+}
+
+nav {
+  margin-bottom: 4em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 1em;
+}
+
+a {
+  color: inherit;
 }
