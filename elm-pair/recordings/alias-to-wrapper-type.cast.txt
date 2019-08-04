@@ -27,7 +27,3 @@
 [2.872186, "o", "\u001b[?25l\r\u001b[30;1H\"src/Main.elm\"   \b\b\u001b[?25h"]
 [2.872672, "o", "\u001b[?25l21L, 358C written\u001b[?25h"]
 [2.873102, "o", "\u001b[?25l\u001b[10;17H \u001b[11;5H= Experience Int\r\n\n\nexperienceAsInt : Experience -> Int\r\nexperienceAsInt (Experience int) =\u001b[16;5Hint\u001b[50X\r\n\u001b[K\n\u001b[K\nshow : Hero -> String\u001b[K\r\nshow { name, experience } =\u001b[K\r\n    name ++ \" has \" ++ String.fromInt (experienceAsInt experience) ++ \" XP\"\u001b[K\u001b(B\u001b[0;1;7m\u001b[29;14H   \u001b[47C,1 \u001b[?25h\u001b[?25l\u001b[H\u001b[?25h"]
-[5.025017, "o", "\u001b[?25l\u001b[30;70H\u001b(B\u001b[m:\u001b[H\u001b[?25h\u001b[?25l\u001b[29B\u001b[70X:\u001b]112\u0007\u001b[2 q\u001b[?25h"]
-[5.264926, "o", "\u001b[?25lq\u001b[?25h"]
-[5.705008, "o", "\u001b[?25l\r\u001b[30;1H\u001b[?25h"]
-[5.729027, "o", "\u001b[?25l\u001b]112\u0007\u001b[2 q\u001b[?25h\u001b[?25l\u001b]112\u0007\u001b[2 q\u001b(B\u001b[m\u001b[?25h\u001b[?1l\u001b>\u001b[?1049l\u001b[23;0;0t\u001b[?2004l\u001b[?1004l\u001b[?25h"]

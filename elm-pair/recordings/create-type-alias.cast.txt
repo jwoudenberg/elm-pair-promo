@@ -47,7 +47,3 @@
 [4.850545, "o", "\u001b[?25l16L, 262C written\u001b[?25h"]
 [4.851094, "o", "\u001b[?25l\r\u001b[20Atype alias Experience =\r\n    Int\u001b[20X\u001b[12;5H\u001b[61X\r\n\u001b[K\nshow : Hero -> String\u001b[K\r\nshow { name, experience } =\u001b[K\r\n    name ++ \" has \" ++ String.fromInt experience ++ \" experience\"\u001b[K\u001b(B\u001b[0;1;7m\u001b[29;14H   \u001b[46C1,1 \u001b[?25h\u001b[?25l\u001b[H\u001b[?25h"]
 [6.003059, "o", "\u001b[?25l\u001b[30;70H\u001b(B\u001b[m:\u001b[H\u001b[?25h"]
-[6.003134, "o", "\u001b[?25l\u001b[29B\u001b[70X:\u001b]112\u0007\u001b[2 q\u001b[?25h"]
-[6.155006, "o", "\u001b[?25lq\u001b[?25h"]
-[6.314891, "o", "\u001b[?25l\r\u001b[30;1H\u001b[?25h"]
-[6.338326, "o", "\u001b[?25l\u001b]112\u0007\u001b[2 q\u001b[?25h\u001b[?25l\u001b]112\u0007\u001b[2 q\u001b(B\u001b[m\u001b[?25h\u001b[?1l\u001b>\u001b[?1049l\u001b[23;0;0t\u001b[?2004l\u001b[?1004l\u001b[?25h"]

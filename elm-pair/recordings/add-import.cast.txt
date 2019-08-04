@@ -50,7 +50,3 @@
 [5.479749, "o", "\u001b[?25l10L, 139C written\u001b[?25h"]
 [5.480158, "o", "\u001b[?25l\r\u001b[27Aimport Set\r\n\u001b[17X\u001b[5;5H\u001b[15X\r\ntype alias Hero =\u001b[12X\u001b[7;5H{ name : String   \u001b[8;5H, titles : Set.Set String\r\n    , experience : Int\u001b[K\r\n    }\u001b[K\u001b(B\u001b[0;1;7m\u001b[29;14H   \u001b[46C1,1 \u001b[?25h\u001b[?25l\u001b[H\u001b[?25h"]
 [6.583907, "o", "\u001b[?25l\u001b[30;70H\u001b(B\u001b[m:\u001b[H\u001b[?25h"]
-[6.58397, "o", "\u001b[?25l\u001b[29B\u001b[70X:\u001b]112\u0007\u001b[2 q\u001b[?25h"]
-[6.751105, "o", "\u001b[?25lq\u001b[?25h"]
-[6.880417, "o", "\u001b[?25l\r\u001b[30;1H\u001b[?25h"]
-[6.903107, "o", "\u001b[?25l\u001b]112\u0007\u001b[2 q\u001b[?25h\u001b[?25l\u001b]112\u0007\u001b[2 q\u001b(B\u001b[m\u001b[?25h\u001b[?1l\u001b>\u001b[?1049l\u001b[23;0;0t\u001b[?2004l\u001b[?1004l\u001b[?25h"]
