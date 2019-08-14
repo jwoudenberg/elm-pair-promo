@@ -1,5 +1,5 @@
 autocmd BufWritePost * call ElmPair()
-nnoremap - :q!<CR>
+nnoremap - ZQ
 
 " Use an extra-high command area so the asciinema player chrome won't overlap.
 set cmdheight=5
@@ -20,9 +20,6 @@ function ElmPair()
 
   " Restore the cursor position.
   call setpos('.', save_cursor)
-
-  " Clear message saying file has been saved.
-  execute "messages clear"
 
   " Redraw the screen now, so the message echoed below won't disappear.
   redraw
