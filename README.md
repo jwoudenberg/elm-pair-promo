@@ -32,7 +32,7 @@ Let's consider how this alternative take on language servers compares to the ori
 
 The first language server protocol shortcoming I called out was that it required programmers to be familiar with a bunch of menus or hotkeys. The editor server protocol allows us to build nicer interactions. In the example above the user doesn't need to go through any menu or click any key to rename a variable. They kick off the change by writing code and then the language server finishes it. The programmer can discover the renaming functionality as a natural part of their work.
 
-The second LSP shortcoming I raised was that the language server protocol does not support tricks related to the properties that make a programming language unique. The editor-driven approach doesn't have this limitation. There's no limits to the language-specific functionality it can support. For some examples of language-specific tooling functionality check out this proposal for an [Elm language server based on the editor driver approach]!
+The second LSP shortcoming I raised was that the language server protocol does not support tricks related to the properties that make a programming language unique. The editor-driven approach doesn't have this limitation. There's no limits to the language-specific functionality it can support. For some examples of language-specific tooling functionality check out this proposal for [elm-pair], an Elm language server based on the editor driver approach!
 
 There's downsides too. In the variable rename example there's a natural hook that triggers the language server: it's the programmer changing the name of the variable in one place. There might not be a good hook for every trick a language server might want to support. A language server that doesn't guess the programmers intent will be annoying rather than helpful. The bar for good language server design is higher when using the editor driver approach.
 
@@ -41,3 +41,5 @@ Another downside is that we're now abstracting editors. Whereas in the old appro
 ## Conclusion
 
 Language servers enable us to write programming tooling once for all editors. We can improve on the concept by abstracting editors rather than programming languages. This results in new design challenges, but when overcome allows creation of delightful tooling that is discoverable and supports each language's strengths.
+
+[elm-pair]: https://elm-pair.jasperwoudenberg.com/
