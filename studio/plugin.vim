@@ -1,8 +1,8 @@
 autocmd BufWritePost * call ElmPair()
 nnoremap - :q!<CR>
 
-" Don't clear screen when exiting Vim (show Vim on last frame of recording).
-set t_ti= t_te=
+" Use an extra-high command area so the asciinema player chrome won't overlap.
+set cmdheight=5
 
 function ElmPair()
   " Save cursor position for restoring it later.
