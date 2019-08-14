@@ -23,3 +23,6 @@ mv Main.elm.backup src/Main.elm
 # Restore original terminal dimensions.
 stty columns "$COLS"
 stty rows "$ROWS"
+
+# Remove the last line of the recording (which clears the screen).
+sed -i '$ d' rec.cast

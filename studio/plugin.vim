@@ -15,11 +15,14 @@ function ElmPair()
   " call setqflist([{'bufnr': bufnr(''), 'pattern': 'Quest'}])
 
   " Highlight the changes.
-  highlight Changes cterm=bold term=bold ctermbg=yellow ctermfg=white
+  highlight Changes cterm=bold term=bold ctermbg=yellow ctermfg=black
   match Changes /Quest/
 
   " Restore the cursor position.
   call setpos('.', save_cursor)
+
+  " Clear message saying file has been saved.
+  execute "messages clear"
 
   " Redraw the screen now, so the message echoed below won't disappear.
   redraw
