@@ -1,6 +1,9 @@
 autocmd BufWritePost * call ElmPair()
 nnoremap - :q!<CR>
 
+" Don't clear screen when exiting Vim (show Vim on last frame of recording).
+set t_ti= t_te=
+
 function ElmPair()
   " Save cursor position for restoring it later.
   let save_cursor = getcurpos()
@@ -12,7 +15,7 @@ function ElmPair()
   " call setqflist([{'bufnr': bufnr(''), 'pattern': 'Quest'}])
 
   " Highlight the changes.
-  highlight Changes cterm=bold term=bold ctermbg=yellow ctermfg=black
+  highlight Changes cterm=bold term=bold ctermbg=yellow ctermfg=white
   match Changes /Quest/
 
   " Restore the cursor position.
@@ -22,7 +25,5 @@ function ElmPair()
   redraw
 
   " Elm-pair explains what it did.
-  echohl WarningMsg
   echomsg 'Elm-pair: Renamed "Mission" to "Quest" across 4 files.'
-  echohl None
 endfunction
