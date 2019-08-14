@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/21cfeac6-cf5a-48d0-8605-9c2ca52fd99b/deploy-status)](https://app.netlify.com/sites/elm-pair/deploys)
+
 # Improving on language servers
 
 Language servers are great, but we can do so much better. A language server is a program that knows a bunch of tricks for working with a programming language. Say you want to rename a variable in a project. You click in a menu or press a hotkey to send the instruction to your editor, and then your editor can delegate the work to a language server.
