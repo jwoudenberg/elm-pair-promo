@@ -1,5 +1,4 @@
 autocmd BufWritePre * call ElmPair()
-nnoremap - ZQ
 
 " Use an extra-high command area so the asciinema player chrome won't overlap.
 set cmdheight=5
