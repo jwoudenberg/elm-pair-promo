@@ -26,4 +26,10 @@ function ElmPair()
 
   " Elm-pair explains what it did.
   echomsg 'Elm-pair: Renamed "Mission" to "Quest" across 4 files.'
+
+  " Quit Vim after two seconds.
+  redraw
+  sleep 1
+  normal ZQ
+
 endfunction
