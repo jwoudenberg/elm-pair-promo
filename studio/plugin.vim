@@ -15,7 +15,7 @@ function ElmPair()
 
   " Highlight the changes.
   highlight Changes cterm=bold term=bold ctermbg=yellow ctermfg=black
-  match Changes /Quest/
+  match Changes /exposing (Set)/
 
   " Restore the cursor position.
   call setpos('.', save_cursor)
@@ -24,7 +24,7 @@ function ElmPair()
   redraw
 
   " Elm-pair explains what it did.
-  echomsg 'Elm-pair: Renamed "Mission" to "Quest" across 4 files.'
+  echomsg 'Elm-pair: I exposed "Set" from the module "Set".'
 
   " Quit Vim after two seconds.
   redraw
