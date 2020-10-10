@@ -3,3 +3,12 @@
 # Elm-pair
 
 This repo contains a website illustration a hypothetical development tool called `elm-pair`, and the text for an accompanying blog post.
+
+## Development
+
+To start a file server:
+
+```sh
+cd elm-pair
+caddy2 file-server
+```
